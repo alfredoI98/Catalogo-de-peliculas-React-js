@@ -6,7 +6,7 @@ export function useMovies(url) {
     const [movies, setMovies] = useState(null);
 
     useEffect(() => {
-        
+
         fetch(url)
             .then(respuesta => respuesta.json())
             .then(data => {

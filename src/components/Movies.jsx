@@ -1,8 +1,10 @@
+import "./Movies.css"
+
 function ListOfMovies({ movies }) {
     let urlPosterMovie = "https://image.tmdb.org/t/p/w500/";
 
     return (
-        <ul>
+        <ul className="container_movies">
             {
                 movies.map(movie => (
                     <li key={movie.id}>
