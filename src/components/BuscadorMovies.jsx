@@ -1,13 +1,13 @@
 import { useRef, useState } from 'react'
 
-export function BuscadorMovies() {
+export function BuscadorMovies({ setBusqueda }) {
     const inputRef = useRef();
 
     function handleSubmit(e) {
         e.preventDefault();
         const value = inputRef.current.value;
-        const containerMovies = document.getElementById('container');
-        containerMovies.innerHTML = value;
+        setBusqueda(value);
+        console.log(value)
     }
     return (
         <>

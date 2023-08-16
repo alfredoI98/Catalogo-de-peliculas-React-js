@@ -6,7 +6,7 @@ function ListOfMovies({ movies }) {
     return (
         <ul className="container_movies">
             {
-                movies.map(movie => (
+                movies?.map(movie => (
                     <li key={movie.id}>
                         <img src={urlPosterMovie + movie.poster} alt="Poster pelicula" />
                         <h3>{movie.title}</h3>
